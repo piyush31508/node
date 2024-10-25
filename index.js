@@ -20,7 +20,7 @@ async function main() {
 server.use(cors());
 server.use(express.json())
 server.use('/products', productRouter.router);
-server.use(express.static(path.resolve(__dirname,process.env.DIR)));
+server.use(express.static(path.resolve(__dirname, process.env.DIR)));
 server.use('*',(req,res)=>{
   res.sendFile(path.resolve(__dirname,`build`,`index.html`));
 })
