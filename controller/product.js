@@ -9,7 +9,6 @@ exports.createProduct = async (req, res) => {
   res.status(201).json(savedProduct);}
   catch(err){
     console.log(err);
-   // Respond with error message
    res.status(500).json({ message: 'Error saving product', err });
   }
 
