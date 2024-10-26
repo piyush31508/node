@@ -20,11 +20,13 @@ async function main() {
 server.use(cors());
 server.use(express.json())
 server.use('/products', productRouter.router);
-server.use(express.static(path.resolve(__dirname, process.env.DIR)));
-server.use('*',(req,res)=>{
-  res.sendFile(path.resolve(__dirname,`build`,`index.html`));
-})
+server.use(express.static(path.resolve(__dirname, 'build')));
 
-server.listen(process.env.PORT,()=> {
-    console.log('listening on 8000')
+server.use('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
+
+
+server.listen(process.env.PORT || 8000, () => {
+  console.log('Server is listening');
 });
