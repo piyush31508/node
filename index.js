@@ -1,9 +1,9 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const productRouter = require('./routes/product');
 const cors = require('cors');
-const path = require('path');
 // console.log('env', process.env.DB_PASSWORD);
 const server = express();
 
