@@ -11,6 +11,7 @@
     ],
     "routes": [ 
       { "src": "/", "dest": "build/index.html" },
+      { "src": "/add", "dest": "build/index.html" },
       { "src": "/products", "dest": "index.js" },
       { "src": "/products/(.*)", "dest": "index.js" },
       { "src": "/(.+)", "dest": "build/$1" }
